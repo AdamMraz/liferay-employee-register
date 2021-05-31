@@ -1,0 +1,50 @@
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+
+<service-builder package-path="com.liferay.EmployeeRegister.service">
+	<namespace>Emp</namespace>
+	<!--<entity data-source="sampleDataSource" local-service="true" name="Foo" remote-service="false" session-factory="sampleSessionFactory" table="foo" tx-manager="sampleTransactionManager uuid="true"">-->
+	<entity name="Employee" local-service="true" remote-service="false"
+		uuid="true">
+
+		<!-- PK fields -->
+
+		<column name="employeeId" primary="true" type="long" db-name="employee_id"></column>
+
+		<!-- Audit fields -->
+		<column name="name" type="String"></column>
+		<column name="patronymic" type="String"></column>
+        <column name="surname" type="String"></column>
+        <column name="gender" type="String"></column>
+        <column name="birthDate" type="Date" db-name="birth_date"></column>
+        <column name="dateOfEmployment" type="Date" db-name="date_of_employment"></column>
+        <column name="salary" type="int"></column>
+        <column name="workPhone" type="String" db-name="work_phone"></column>
+        <column name="mobilePhone" type="String" db-name="mobile_phone"></column>
+        <column name="archive" type="boolean"></column>
+        <column name="bankId" type="Collection" entity="Bank" mapping-table="Banks_Employees" db-name="bank_id"></column>
+        <column name="positionId" type="long" db-name="position_id"></column>
+	</entity>
+	<entity name="Bank" local-service="true" uuid="true" remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="bankId" primary="true" type="long" db-name="bank_id"></column>
+
+		<!-- Audit fields -->
+        <column name="name" type="String"></column>
+        <column name="bik" type="String"></column>
+        <column name="address" type="String"></column>
+        <column name="employeeId" type="Collection" entity="Employee" mapping-table="Banks_Employees" db-name="employee_id"></column>
+	</entity>
+	<entity name="Position" uuid="true" local-service="true" remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="positionId" primary="true" type="long" db-name="position_id"></column>
+
+		<!-- Audit fields -->
+        <column name="name" type="String"></column>
+        <column name="archive" type="boolean"></column>
+        <column name="employeeId" type="long" db-name="employee_id"></column>
+	</entity>
+</service-builder>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.liferay.EmployeeRegister.service.model.Bank">
+		<field name="uuid" type="String" />
+		<field name="bankId" type="long" />
+		<field name="name" type="String" />
+		<field name="bik" type="String" />
+		<field name="address" type="String" />
+	</model>
+	<model name="com.liferay.EmployeeRegister.service.model.Employee">
+		<field name="uuid" type="String" />
+		<field name="employeeId" type="long" />
+		<field name="name" type="String" />
+		<field name="patronymic" type="String" />
+		<field name="surname" type="String" />
+		<field name="gender" type="String" />
+		<field name="birthDate" type="Date" />
+		<field name="dateOfEmployment" type="Date" />
+		<field name="salary" type="int" />
+		<field name="workPhone" type="String" />
+		<field name="mobilePhone" type="String" />
+		<field name="archive" type="boolean" />
+		<field name="positionId" type="long" />
+	</model>
+	<model name="com.liferay.EmployeeRegister.service.model.Position">
+		<field name="uuid" type="String" />
+		<field name="positionId" type="long" />
+		<field name="name" type="String" />
+		<field name="archive" type="boolean" />
+		<field name="employeeId" type="long" />
+	</model>
+</model-hints>

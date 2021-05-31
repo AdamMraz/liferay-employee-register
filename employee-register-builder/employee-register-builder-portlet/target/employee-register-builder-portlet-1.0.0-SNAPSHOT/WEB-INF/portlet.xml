@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" version="2.0">
+	<portlet>
+		<portlet-name>employee-register-mvc</portlet-name>
+		<display-name>Employee Register</display-name>
+		<portlet-class>
+			com.liferay.EmployeeRegister.portlet.EmployeeRegisterMVC
+		</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/employeeregistermvc/view.jsp</value>
+		</init-param>
+		<init-param>
+		    <name>add-process-action-success-action</name>
+		    <value>false</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Employee Register</title>
+			<short-title>Employee Register</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+	<portlet>
+		<portlet-name>bank-register-mvc</portlet-name>
+		<display-name>Bank Register</display-name>
+		<portlet-class>
+			com.liferay.EmployeeRegister.portlet.BankRegisterMVC
+		</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/bankregistermvc/view.jsp</value>
+		</init-param>
+		<init-param>
+		    <name>add-process-action-success-action</name>
+		    <value>false</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Bank Register</title>
+			<short-title>Bank Register</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+	<portlet>
+		<portlet-name>position-register-mvc</portlet-name>
+		<display-name>Position Register Mvc</display-name>
+		<portlet-class>
+			com.liferay.EmployeeRegister.portlet.PositionRegisterMVC
+		</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/positionregistermvc/view.jsp</value>
+		</init-param>
+		<init-param>
+		    <name>add-process-action-success-action</name>
+		    <value>false</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Position Register</title>
+			<short-title>Position Register</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+</portlet-app>

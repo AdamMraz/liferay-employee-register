@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.liferay.EmployeeRegister.service.model.Bank" />
+	<import class="com.liferay.EmployeeRegister.service.model.Employee" />
+	<import class="com.liferay.EmployeeRegister.service.model.Position" />
+	<class name="com.liferay.EmployeeRegister.service.model.impl.BankImpl" table="Emp_Bank">
+		<cache usage="read-write" />
+		<id name="bankId" column="bank_id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="uuid" type="com.liferay.portal.dao.orm.hibernate.StringType" column="uuid_" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="bik" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="address" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.liferay.EmployeeRegister.service.model.impl.EmployeeImpl" table="Emp_Employee">
+		<cache usage="read-write" />
+		<id name="employeeId" column="employee_id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="uuid" type="com.liferay.portal.dao.orm.hibernate.StringType" column="uuid_" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="patronymic" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="surname" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="gender" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="birthDate" type="org.hibernate.type.TimestampType" column="birth_date" />
+		<property name="dateOfEmployment" type="org.hibernate.type.TimestampType" column="date_of_employment" />
+		<property name="salary" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="workPhone" type="com.liferay.portal.dao.orm.hibernate.StringType" column="work_phone" />
+		<property name="mobilePhone" type="com.liferay.portal.dao.orm.hibernate.StringType" column="mobile_phone" />
+		<property name="archive" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="positionId" type="com.liferay.portal.dao.orm.hibernate.LongType" column="position_id" />
+	</class>
+	<class name="com.liferay.EmployeeRegister.service.model.impl.PositionImpl" table="Emp_Position">
+		<cache usage="read-write" />
+		<id name="positionId" column="position_id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="uuid" type="com.liferay.portal.dao.orm.hibernate.StringType" column="uuid_" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="archive" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="employeeId" type="com.liferay.portal.dao.orm.hibernate.LongType" column="employee_id" />
+	</class>
+</hibernate-mapping>

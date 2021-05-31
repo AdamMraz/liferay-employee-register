@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.liferay.EmployeeRegister.service.service.BankLocalService" class="com.liferay.EmployeeRegister.service.service.impl.BankLocalServiceImpl" />
+	<bean id="com.liferay.EmployeeRegister.service.service.persistence.BankPersistence" class="com.liferay.EmployeeRegister.service.service.persistence.BankPersistenceImpl" parent="basePersistence" />
+	<bean id="com.liferay.EmployeeRegister.service.service.EmployeeLocalService" class="com.liferay.EmployeeRegister.service.service.impl.EmployeeLocalServiceImpl" />
+	<bean id="com.liferay.EmployeeRegister.service.service.persistence.EmployeePersistence" class="com.liferay.EmployeeRegister.service.service.persistence.EmployeePersistenceImpl" parent="basePersistence" />
+	<bean id="com.liferay.EmployeeRegister.service.service.PositionLocalService" class="com.liferay.EmployeeRegister.service.service.impl.PositionLocalServiceImpl" />
+	<bean id="com.liferay.EmployeeRegister.service.service.persistence.PositionPersistence" class="com.liferay.EmployeeRegister.service.service.persistence.PositionPersistenceImpl" parent="basePersistence" />
+</beans>

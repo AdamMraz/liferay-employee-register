@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.liferay.EmployeeRegister.service.model.impl.BankModelImpl">
+		<attributes>
+			<id name="bankId">
+				<column name="BANK_ID" />
+			</id>
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="name" />
+			<basic name="bik" />
+			<basic name="address" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.liferay.EmployeeRegister.service.model.impl.EmployeeModelImpl">
+		<attributes>
+			<id name="employeeId">
+				<column name="EMPLOYEE_ID" />
+			</id>
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="name" />
+			<basic name="patronymic" />
+			<basic name="surname" />
+			<basic name="gender" />
+			<basic name="birthDate">
+				<column name="BIRTH_DATE" />
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="dateOfEmployment">
+				<column name="DATE_OF_EMPLOYMENT" />
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="salary" />
+			<basic name="workPhone">
+				<column name="WORK_PHONE" />
+			</basic>
+			<basic name="mobilePhone">
+				<column name="MOBILE_PHONE" />
+			</basic>
+			<basic name="archive" />
+			<basic name="positionId">
+				<column name="POSITION_ID" />
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.liferay.EmployeeRegister.service.model.impl.PositionModelImpl">
+		<attributes>
+			<id name="positionId">
+				<column name="POSITION_ID" />
+			</id>
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="name" />
+			<basic name="archive" />
+			<basic name="employeeId">
+				<column name="EMPLOYEE_ID" />
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.liferay.EmployeeRegister.service.model.impl.BankImpl" name="Bank">
+		<table name="Emp_Bank" />
+		<attributes />
+	</entity>
+	<entity class="com.liferay.EmployeeRegister.service.model.impl.EmployeeImpl" name="Employee">
+		<table name="Emp_Employee" />
+		<attributes />
+	</entity>
+	<entity class="com.liferay.EmployeeRegister.service.model.impl.PositionImpl" name="Position">
+		<table name="Emp_Position" />
+		<attributes />
+	</entity>
+</entity-mappings>
